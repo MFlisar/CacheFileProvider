@@ -1,0 +1,29 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.github.MFlisar'
+
+android {
+    if (project.hasProperty('setup.compileSdk'))
+    {
+        compileSdkVersion setup.compileSdk
+        buildToolsVersion setup.buildTools
+        defaultConfig {
+            minSdkVersion setup.minSdk
+            targetSdkVersion setup.targetSdk
+        }
+    }
+    else
+    {
+        compileSdkVersion 26
+        buildToolsVersion "26.0.2"
+        defaultConfig {
+            minSdkVersion 14
+            targetSdkVersion 26
+        }
+    }
+}
+
+dependencies {
+
+}
