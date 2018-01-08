@@ -1,7 +1,7 @@
-### CacheFileProvider [![Release](https://jitpack.io/v/MFlisar/CacheFileProvider.svg)](https://jitpack.io/#MFlisar/CacheFileProvider)
+### CacheFileProvider [![Release](https://jitpack.io/v/MFlisar/CacheFileProvider.svg)](https://jitpack.io/#MFlisar/CacheFileProvider) <a href="http://www.methodscount.com/?lib=com.github.MFlisar%3ACacheFileProvider%3A0.1"><img src="https://img.shields.io/badge/Methods and size-48 | 5 KB-e91e63.svg"/></a>
 
 ### What is it / What does it do?
-This is a minimal library without dependencies that offers a simple cache file provider.
+This is a minimal library with a few lines of code and without dependencies that offers a simple cache file provider (simple read only access for sharing files with other apps).
  
 ### Gradle (via [JitPack.io](https://jitpack.io/))
 
