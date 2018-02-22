@@ -33,7 +33,14 @@ public class CacheFileProviderUtil {
         return cacheFile;
     }
 
-    public static Uri copyFile(Context context, Uri fileToCopy, String cacheFileName) {
+    public static Uri copyFile(Context context, Uri fileToCopy, String cacheFileName, boolean checkIfFileIsInCache) {
+
+        // 1) check if file is already in cache
+        if (checkIfFileIsInCache && isFileInCache(context, fileToCopy)) {
+            return fileToCopy;
+        }
+
+        // 2) else copy the file to the cache directory
         File cacheFile = new File(context.getCacheDir(), cacheFileName);
         if (cacheFile.exists()) {
             cacheFile.delete();
@@ -50,6 +57,16 @@ public class CacheFileProviderUtil {
         }
 
         return Uri.fromFile(cacheFile);
+    }
+
+    private static boolean isFileInCache(Context context, Uri fileUri) {
+        try {
+            File file = new File(fileUri.getPath());
+            return file.getParentFile().getAbsolutePath().equals(context.getCacheDir().getAbsolutePath());
+        } catch (Exception e) {
+            return false;
+        }
+
     }
 
     private static boolean copy(File src, File dst) {
