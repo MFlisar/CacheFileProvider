@@ -17,7 +17,7 @@ repositories {
 
 ```groovy
 dependencies {
-	compile 'com.github.MFlisar:CacheFileProvider:0.1'
+	compile 'com.github.MFlisar:CacheFileProvider:0.2'
 }
 ```
 
