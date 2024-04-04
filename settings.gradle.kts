@@ -7,8 +7,8 @@ dependencyResolutionManagement {
     }
     versionCatalogs {
 
-        val kotlin = "1.9.10"
-        val gradle = "8.1.2"
+        val kotlin = "1.9.22"
+        val gradle = "8.3.1"
 
         // TOML Files
         create("androidx") {
