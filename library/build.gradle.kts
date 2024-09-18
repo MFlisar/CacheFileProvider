@@ -18,9 +18,9 @@ val artifactId = "library"
 
 // Library
 val libraryName = "CacheFileProvider"
-val libraryDescription = "$artifactId module"
+val libraryDescription = "This is a minimal library that offers a simple file provider (simple read only access for sharing files with other apps)."
 val groupID = "io.github.mflisar.cachefileprovider"
-val release = 2024
+val release = 2017
 val github = "https://github.com/MFlisar/CacheFileProvider"
 val license = "Apache License 2.0"
 val licenseUrl = "$github/blob/main/LICENSE"
