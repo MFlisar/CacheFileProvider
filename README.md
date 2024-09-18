@@ -1,7 +1,6 @@
 [![Maven](https://img.shields.io/maven-central/v/io.github.mflisar.cachefileprovider/library?style=for-the-badge&color=blue)](https://central.sonatype.com/namespace/io.github.mflisar.cachefileprovider)
 [![API](https://img.shields.io/badge/api-21%2B-brightgreen.svg?style=for-the-badge)](https://android-arsenal.com/api?level=21)
 [![Kotlin](https://img.shields.io/github/languages/top/mflisar/cachefileprovider.svg?style=for-the-badge&color=blueviolet)](https://kotlinlang.org/)
-[![KMP](https://img.shields.io/badge/Kotlin_Multiplatform-blue?style=for-the-badge&label=Kotlin)](https://kotlinlang.org/docs/multiplatform.html)
 [![License](https://img.shields.io/github/license/MFlisar/CacheFileProvider?style=for-the-badge)](LICENSE)
 
 <h1 align="center">CacheFileProvider</h1>
@@ -52,4 +51,4 @@ val uri = CachedFileProvider.getCacheFileUri(context, cacheFile.name)
 
 ## :bulb: Tipp
 
-If you want to share the cached file with an email app, then check out [FeedbackManager](about:blank) - its an utility based on `CacheFileProvider` that does exactly that. It also takes care of the above mentioned `Intent.FLAG_GRANT_READ_URI_PERMISSION`.
+If you want to share the cached file with an email app, then check out [FeedbackManager](https://github.com/MFlisar/FeedbackManager) - its an utility based on `CacheFileProvider` that does exactly that. It also takes care of the above mentioned `Intent.FLAG_GRANT_READ_URI_PERMISSION`.
