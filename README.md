@@ -30,7 +30,7 @@ This library is distributed via [maven central](https://central.sonatype.com/).
 ```kts
 val cachefileprovider = "<LATEST-VERSION>"
 
-implementation("io.github.mflisar.cachefileprovider:libray:$cachefileprovider")
+implementation("io.github.mflisar.cachefileprovider:library:$cachefileprovider")
 ```
 
 ## </> Basic Usage
