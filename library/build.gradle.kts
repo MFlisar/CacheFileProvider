@@ -1,9 +1,33 @@
+import com.vanniktech.maven.publish.AndroidSingleVariantLibrary
+import com.vanniktech.maven.publish.SonatypeHost
+
 plugins {
-    id("com.android.library")
-    id("kotlin-android")
-    id("kotlin-parcelize")
-    id("maven-publish")
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.dokka)
+    alias(libs.plugins.gradle.maven.publish.plugin)
 }
+
+// -------------------
+// Informations
+// -------------------
+
+// Module
+val artifactId = "library"
+
+// Library
+val libraryName = "CacheFileProvider"
+val libraryDescription = "$artifactId module"
+val groupID = "io.github.mflisar.cachefileprovider"
+val release = 2024
+val github = "https://github.com/MFlisar/CacheFileProvider"
+val license = "Apache License 2.0"
+val licenseUrl = "$github/blob/main/LICENSE"
+
+// -------------------
+// Setup
+// -------------------
 
 android {
 
@@ -47,17 +71,56 @@ dependencies {
     // AndroidX
     // ------------------------
 
-    implementation(androidx.core)
+    implementation(libs.androidx.core)
 
 }
 
-project.afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("maven") {
-                artifactId = "library"
-                from(components["release"])
+mavenPublishing {
+
+    configure(AndroidSingleVariantLibrary("release", true, true))
+
+    //configure(
+    //    KotlinMultiplatform(
+    //        javadocJar = JavadocJar.Dokka("dokkaHtml"),
+    //        sourcesJar = true
+    //    )
+    //)
+
+    coordinates(
+        groupId = groupID,
+        artifactId = artifactId,
+        version = System.getenv("TAG")
+    )
+
+    pom {
+        name.set(libraryName)
+        description.set(libraryDescription)
+        inceptionYear.set("$release")
+        url.set(github)
+
+        licenses {
+            license {
+                name.set(license)
+                url.set(licenseUrl)
             }
         }
+
+        developers {
+            developer {
+                id.set("mflisar")
+                name.set("Michael Flisar")
+                email.set("mflisar.development@gmail.com")
+            }
+        }
+
+        scm {
+            url.set(github)
+        }
     }
+
+    // Configure publishing to Maven Central
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+
+    // Enable GPG signing for all publications
+    signAllPublications()
 }

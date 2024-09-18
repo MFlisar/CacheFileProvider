@@ -1,5 +1,0 @@
-[versions]
-core = 				"1.12.0"
-
-[libraries]
-core = 				{ module = "androidx.core:core-ktx", 						version.ref = "core" }

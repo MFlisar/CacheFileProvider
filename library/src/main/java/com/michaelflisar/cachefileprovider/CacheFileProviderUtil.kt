@@ -35,7 +35,7 @@ internal object CacheFileProviderUtil {
         }
     }
 
-   private fun copy(inputStream: InputStream?, outputStream: OutputStream): Boolean {
+    private fun copy(inputStream: InputStream?, outputStream: OutputStream): Boolean {
         if (inputStream == null)
             return false
         var success = false
