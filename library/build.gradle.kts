@@ -79,13 +79,6 @@ mavenPublishing {
 
     configure(AndroidSingleVariantLibrary("release", true, true))
 
-    //configure(
-    //    KotlinMultiplatform(
-    //        javadocJar = JavadocJar.Dokka("dokkaHtml"),
-    //        sourcesJar = true
-    //    )
-    //)
-
     coordinates(
         groupId = groupID,
         artifactId = artifactId,
