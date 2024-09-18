@@ -23,7 +23,7 @@ This library does not have any custom dependencies!
 
 ## :elephant: Gradle
 
-This library is distributed via [maven central]([https://central.sonatype.com/](https://repo.maven.apache.org/maven2/io/github/mflisar/cachefileprovider/)).
+This library is distributed via [maven central](https://central.sonatype.com/).
 
 *build.gradle.kts*
 
