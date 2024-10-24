@@ -13,10 +13,6 @@ This is a minimal library with a **few lines of code** and without dependencies 
 * allows to simply share a file without any setup from user side
 * minimal size - contains only **8 functions** inside **2 classes**
 
-## :camera: Screenshots
-
---
-
 ## :link: Dependencies
 
 This library does not have any custom dependencies!

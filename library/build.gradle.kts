@@ -15,6 +15,7 @@ plugins {
 
 // Module
 val artifactId = "library"
+val androidNamespace = "com.michaelflisar.cachefileprovider"
 
 // Library
 val libraryName = "CacheFileProvider"
@@ -31,7 +32,7 @@ val licenseUrl = "$github/blob/main/LICENSE"
 
 android {
 
-    namespace = "com.michaelflisar.cachefileprovider"
+    namespace = androidNamespace
 
     compileSdk = app.versions.compileSdk.get().toInt()
 
@@ -112,7 +113,7 @@ mavenPublishing {
     }
 
     // Configure publishing to Maven Central
-    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, true)
 
     // Enable GPG signing for all publications
     signAllPublications()
