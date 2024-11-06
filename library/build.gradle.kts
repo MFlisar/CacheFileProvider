@@ -63,16 +63,10 @@ android {
 dependencies {
 
     // ------------------------
-    // Kotlin
-    // ------------------------
-
-    implementation(libs.kotlin)
-
-    // ------------------------
     // KotlinX / AndroidX / Google
     // ------------------------
 
-    implementation(libs.androidx.core)
+    implementation(androidx.core)
 
 }
 

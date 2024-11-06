@@ -1,0 +1,21 @@
+libraries:
+  Utilities:
+    - name: CacheFileProvider
+      link: https://mflisar.github.io/CacheFileProvider
+      maven: io.github.mflisar.cachefileprovider/library
+    - name: FeedbackManager
+      link: https://mflisar.github.io/FeedbackManager
+      maven: io.github.mflisar.feedbackmanager/library
+    #- name: Toolbox
+    #  link: https://github.com/MFlisar/Toolbox
+    # maven: io.github.mflisar.toolbox:core
+  Libraries:
+    - name: KotBilling
+      link: https://mflisar.github.io/KotBilling
+      maven: io.github.mflisar.kotbilling/library
+    - name: KotPreferences
+      link: https://mflisar.github.io/KotPreferences
+      maven: io.github.mflisar.kotpreferences/core
+    - name: Lumberjack
+      link: https://mflisar.github.io/Lumberjack
+      maven: io.github.mflisar.lumberjack/core

@@ -1,25 +1,17 @@
 [versions]
 
 gradle = 				        "8.5.2"
-kotlin = 				        "2.0.20"
+kotlin = 				        "2.0.21"
 dokka =                         "1.9.20"
-gradle-maven-publish-plugin =   "0.29.0"
-
-# KotlinX / AndroidX / Google
-androidx-core = 		        "1.13.1"
+gradle-maven-publish-plugin =   "0.30.0"
 
 [plugins]
 
+# android
 android-library = 			        { id = "com.android.library", 	                    version.ref = "gradle" }
-
 kotlin-android = 				    { id = "org.jetbrains.kotlin.android", 			    version.ref = "kotlin" }
 kotlin-parcelize =                  { id = "org.jetbrains.kotlin.plugin.parcelize",     version.ref = "kotlin"  }
 
+# github release (dokka + maven)
 dokka =                             { id = "org.jetbrains.dokka",                       version.ref = "dokka" }
 gradle-maven-publish-plugin =       { id = "com.vanniktech.maven.publish.base",         version.ref = "gradle-maven-publish-plugin" }
-
-[libraries]
-
-kotlin =						    { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", 			version.ref = "kotlin" }
-
-androidx-core = 				    { module = "androidx.core:core-ktx", 						version.ref = "androidx-core" }

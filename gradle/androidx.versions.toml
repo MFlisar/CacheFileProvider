@@ -1,0 +1,7 @@
+[versions]
+
+androidx-core =     "1.13.1"
+
+[libraries]
+
+core = 				{ module = "androidx.core:core-ktx",    version.ref = "androidx-core" }
