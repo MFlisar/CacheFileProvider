@@ -4,7 +4,7 @@ icon: material/information-variant
 
 {% include 'header.md' %}
 
-This is a minimal library with a **few lines of code** and without dependencies that offers a simple file provider (simple read only access for sharing files with other apps).
+{% include 'description.md' %}
 
 {% include 'region-features.md' %}
 
