@@ -31,35 +31,21 @@ library:
 # -------------
 
 #modules:
-  #- #name: "" # single module hat keinen Namen!
-    # group: "" # single module hat keine Gruppe!
-    # description: "" # single module hat keine Beschreibung!
-    # optional: false # single module ist nie optional
-    #platforms: # optionales Array - wird nur bei multiplatform genutzt!
+  #- # name: ""            # single module braucht keinen Namen!
+    # group: ""           # single module braucht keine Gruppe!
+    # description: ""     # single module braucht keine Beschreibung!
+    # optional: false     # single module ist nie optional
+    #platforms:           # optionales Array - wird nur bei multiplatform genutzt!
     #  android: true
     #  ios: true
     #  jvm: true
-    #  info: 
-    #dependencies: # optionales Array
+    #  info:
+    #dependencies:         # optionales Array
     #  - name: FeedbackManager
-    #    link: https://github.com/MFlisar/FeedbackManager
-    #    version: 2.0.1
+    #    link: https://mflisar.github.io/CacheFileProvider/
+    #    version: 0.4.0
 
-#  - name: "module2" # single module hat keinen Namen!
-#    group: "b" # single module hat keine Gruppe!
-#    # description: "" # single module hat keine Beschreibung!
-#    # optional: false # single module ist nie optional
-#    platforms: # optionales Array
-#      android: true
-#      ios: true
-#      jvm: true
-#      info:
-#    dependencies: # optionales Array
-#      - name: FeedbackManager
-#        link: https://github.com/MFlisar/FeedbackManager
-#        version: 2.0.1
-
-# optional: nur bei mehreren Modulen benötigt!
+# GRUPPEN - optional: nur bei mehreren Modulen benötigt!
 #groups:
 #  - name: a
 #    label: Gruppe A
