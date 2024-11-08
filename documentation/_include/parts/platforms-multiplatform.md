@@ -8,6 +8,9 @@ This is a **KMP (kotlin multiplatform)** library and the provided modules do sup
 
 <table>
   <tr>
+    {% if project["modules"] is defined and project["modules"] | length > 1 %}
+    <th>Module</th>
+    {% endif %}
     <th>Android</th>
     <th>iOS</th>
     <th>JVM</th>
@@ -40,7 +43,7 @@ This is a **KMP (kotlin multiplatform)** library and the provided modules do sup
     <tr><td colspan="5" style="background-color:var(--md-primary-fg-color--light);">{{ group["label"] }}</td></tr>
 
     {% for module in project["modules"] %}
-      {% if module["name"] is in group["modules"] %}
+      {% if module["group"] == group["name"] %}
           
         <tr>
             <td><code>{{ module["name"] }}</code></td>

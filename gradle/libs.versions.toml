@@ -9,6 +9,8 @@ gradle-maven-publish-plugin =   "0.30.0"
 
 # android
 android-library = 			        { id = "com.android.library", 	                    version.ref = "gradle" }
+
+# kotlin
 kotlin-android = 				    { id = "org.jetbrains.kotlin.android", 			    version.ref = "kotlin" }
 kotlin-parcelize =                  { id = "org.jetbrains.kotlin.plugin.parcelize",     version.ref = "kotlin"  }
 

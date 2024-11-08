@@ -19,6 +19,7 @@ library:
 
 # nicht notwendig, da library keine platforms unterstützt noch dependencies hat noch module
 
+# optional
 #dependencies:
 #  compose:
 #    cmp: 1.7.0
