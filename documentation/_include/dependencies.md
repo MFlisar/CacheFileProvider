@@ -34,8 +34,8 @@
   {% endif %}
 {% endmacro %}
 
-{% if project["modules"] | length == 1 %}
-  {% if project["modules"][0]["dependencies"] | length == 0 %}
+{% if project["modules"] is not defined or project["modules"] | length == 1 %}
+  {% if  project["modules"] is not defined or project["modules"][0]["dependencies"] | length == 0 %}
   This library does not have any dependencies! 
   {% else %}
 This library does have following dependencies.

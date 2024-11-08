@@ -4,7 +4,7 @@
 {% if page.meta.multiplatform -%}
 ![KMP](https://img.shields.io/badge/Kotlin_Multiplatform-blue?style=for-the-badge&label=Kotlin)
 {%- endif -%}
-[![License](https://img.shields.io/github/license/{{ project["library"]["github"] }}?style=for-the-badge)](https://github.com/{{ project["library"]["github"] }}/blob/main/LICENSE){:target="_blank"}
+[![License](https://img.shields.io/github/license/{{ project["library"]["github"] }}?style=for-the-badge)](https://github.com/{{ project["library"]["github"] }}/blob/{{ project["library"]["branch"] }}/LICENSE){:target="_blank"}
 
 <h1 align="center"><b>{{ project["library"]["name"] }}</b></h1>
 

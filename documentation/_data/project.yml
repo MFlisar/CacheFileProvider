@@ -10,10 +10,14 @@ library:
   maven-main-library: library
   multiplatform: false
   screenshots: []
+  branch: master
+  demo: false
 
 # ------------
 # Dependencies
 # ------------
+
+# nicht notwendig, da library keine platforms unterstützt noch dependencies hat noch module
 
 #dependencies:
 #  compose:
@@ -26,8 +30,8 @@ library:
 # Module
 # -------------
 
-modules:
-  - #name: "" # single module hat keinen Namen!
+#modules:
+  #- #name: "" # single module hat keinen Namen!
     # group: "" # single module hat keine Gruppe!
     # description: "" # single module hat keine Beschreibung!
     # optional: false # single module ist nie optional
@@ -52,8 +56,8 @@ modules:
 #      info:
 #    dependencies: # optionales Array
 #      - name: FeedbackManager
-        link: https://github.com/MFlisar/FeedbackManager
-        version: 2.0.1
+#        link: https://github.com/MFlisar/FeedbackManager
+#        version: 2.0.1
 
 # optional: nur bei mehreren Modulen benötigt!
 #groups:

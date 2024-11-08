@@ -20,12 +20,12 @@ libraries:
     - name: KotPreferences
       link: https://mflisar.github.io/KotPreferences
       maven: io.github.mflisar.kotpreferences/core
-      description: A <b>kotlin delegates</b> based preference library.
+      description: With this library you can declare preferences via <b>kotlin delegates</b> and observe and update them via <b>kotlin flows</b>. This works with any storage implementation, an implementation for JetPack DataStore is provided already.
     - name: Lumberjack
       link: https://mflisar.github.io/Lumberjack
-      image: https://raw.githubusercontent.com/MFlisar/Lumberjack/master/screenshots/compose-viewer1.jpg
+      #image: https://raw.githubusercontent.com/MFlisar/Lumberjack/master/screenshots/compose-viewer1.jpg
       maven: io.github.mflisar.lumberjack/core
-      description: A <b>lazy logging library</b>.
+      description: This is a <b>full logging library</b> with a build in way to log to <b>console</b>, <b>file</b> or any <b>custom</b> place as well as optional extensions to send a log file via mail or show it on the device.
   Compose:
     - name: ComposeChangelog
       link: https://mflisar.github.io/ComposeChangelog
@@ -41,7 +41,7 @@ libraries:
       link: https://mflisar.github.io/ComposeDebugDrawer
       image: https://raw.githubusercontent.com/MFlisar/ComposeDebugDrawer/main/screenshots/demo2.jpg
       maven: io.github.mflisar.composedebugdrawer/core
-      description: This library offers you a <b>simple</b> and easily readme <b>debug drawer</b>.
+      description: This library offers you a <b>simple</b> and easily extendable <b>debug drawer</b>.
     - name: ComposeDialogs
       link: https://mflisar.github.io/ComposeDialogs
       image: https://raw.githubusercontent.com/MFlisar/ComposeDialogs/main/screenshots/overview.jpg

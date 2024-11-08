@@ -1,4 +1,4 @@
-{% if project["modules"] | length > 1 %}
+{% if project["modules"] is defined and project["modules"] | length > 1 %}
 
 === "Dependencies"
 
