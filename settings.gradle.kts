@@ -15,9 +15,6 @@ dependencyResolutionManagement {
         maven("https://jitpack.io")
     }
     versionCatalogs {
-        create("plugins") {
-            from(files("gradle/libs.versions.toml"))
-        }
         create("app") {
             from(files("gradle/app.versions.toml"))
         }
