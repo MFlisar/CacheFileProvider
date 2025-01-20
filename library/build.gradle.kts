@@ -13,18 +13,36 @@ plugins {
 // Informations
 // -------------------
 
+val description = "This is a minimal library that offers a simple file provider (simple read only access for sharing files with other apps)."
+
 // Module
 val artifactId = "library"
 val androidNamespace = "com.michaelflisar.cachefileprovider"
 
 // Library
 val libraryName = "CacheFileProvider"
-val libraryDescription = "This is a minimal library that offers a simple file provider (simple read only access for sharing files with other apps)."
+val libraryDescription = "CacheFileProvider - $artifactId module - $description"
 val groupID = "io.github.mflisar.cachefileprovider"
 val release = 2017
 val github = "https://github.com/MFlisar/CacheFileProvider"
 val license = "Apache License 2.0"
 val licenseUrl = "$github/blob/main/LICENSE"
+
+// -------------------
+// Variables for Documentation Generator
+// -------------------
+
+// # DEP + GROUP are optional arrays!
+
+// OPTIONAL = "false"               // defines if this module is optional or not
+// GROUP_ID = "core"                // defines the "grouping" in the documentation this module belongs to
+// #DEP = "deps.composables.core|Compose Unstyled (core)|https://github.com/composablehorizons/compose-unstyled/"
+// PLATFORM_INFO = ""               // defines a comment that will be shown in the documentation for this modules platform support
+
+// GLOBAL DATA
+// BRANCH = "master"        // defines the branch on github (master/main)
+// GROUP = "core|Core|core"
+// #GROUP = "modules|Modules|dialog modules"
 
 // -------------------
 // Setup

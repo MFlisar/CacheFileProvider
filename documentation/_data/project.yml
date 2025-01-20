@@ -9,7 +9,9 @@ library:
   maven: io.github.mflisar.cachefileprovider
   maven-main-library: library
   multiplatform: false
-  screenshots: []
+  platforms:
+    - android
+  screenshots:  []
   branch: master
   demo: false
 
@@ -17,40 +19,25 @@ library:
 # Dependencies
 # ------------
 
-# nicht notwendig, da library keine platforms unterstützt noch dependencies hat noch module
+dependencies:
+  experimental: false
 
-# optional
-#dependencies:
-#  compose:
-#    cmp: 1.7.0
-#    compose: 1.7.1
-#    material3: 1.3.0
-#    experimental: true
+# ------------
+# Groups
+# ------------
 
-# -------------
-# Module
-# -------------
+groups: []
 
-#modules:
-  #- # name: ""            # single module braucht keinen Namen!
-    # group: ""           # single module braucht keine Gruppe!
-    # description: ""     # single module braucht keine Beschreibung!
-    # optional: false     # single module ist nie optional
-    #platforms:           # optionales Array - wird nur bei multiplatform genutzt!
-    #  android: true
-    #  ios: true
-    #  jvm: true
-    #  info:
-    #dependencies:         # optionales Array
-    #  - name: FeedbackManager
-    #    link: https://mflisar.github.io/CacheFileProvider/
-    #    version: 0.4.0
+# ------------
+# Modules
+# ------------
 
-# GRUPPEN - optional: nur bei mehreren Modulen benötigt!
-#groups:
-#  - name: a
-#    label: Gruppe A
-#    gradle-comment: "Gruppe A..."
-#  - name: b
-#    label: Gruppe B
-#    gradle-comment: "Gruppe B..."
+modules:
+  - name: library
+    group: core
+    description: This is a minimal library that offers a simple file provider (simple read only access for sharing files with other apps).
+    optional: false
+    platforms:
+      - android
+    platforms-info: ""
+    dependencies: []
