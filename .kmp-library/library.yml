@@ -18,7 +18,7 @@ java-version: 17
 
 library:
   name: CacheFileProvider
-  release: 2023
+  release: 2018
   link-docs: https://mflisar.github.io/CacheFileProvider/
   link-repo: https://github.com/MFlisar/CacheFileProvider/
   repo-name: mflisar/CacheFileProvider # the label of the repo link on the mkdocs homepage at the top right
