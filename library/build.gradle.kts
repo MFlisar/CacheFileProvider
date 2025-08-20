@@ -1,5 +1,9 @@
 import com.vanniktech.maven.publish.AndroidSingleVariantLibrary
-import com.vanniktech.maven.publish.SonatypeHost
+import com.michaelflisar.kmplibrary.BuildFilePlugin
+import com.michaelflisar.kmplibrary.dependencyOf
+import com.michaelflisar.kmplibrary.dependencyOfAll
+import com.michaelflisar.kmplibrary.Target
+import com.michaelflisar.kmplibrary.Targets
 
 plugins {
     alias(libs.plugins.kotlin.android)
@@ -7,42 +11,17 @@ plugins {
     alias(libs.plugins.kotlin.parcelize)
     alias(libs.plugins.dokka)
     alias(libs.plugins.gradle.maven.publish.plugin)
+    alias(deps.plugins.kmplibrary.buildplugin)
 }
+
+// get build file plugin
+val buildFilePlugin = project.plugins.getPlugin(BuildFilePlugin::class.java)
 
 // -------------------
 // Informations
 // -------------------
 
-val description = "This is a minimal library that offers a simple file provider (simple read only access for sharing files with other apps)."
-
-// Module
-val artifactId = "library"
 val androidNamespace = "com.michaelflisar.cachefileprovider"
-
-// Library
-val libraryName = "CacheFileProvider"
-val libraryDescription = "CacheFileProvider - $artifactId module - $description"
-val groupID = "io.github.mflisar.cachefileprovider"
-val release = 2017
-val github = "https://github.com/MFlisar/CacheFileProvider"
-val license = "Apache License 2.0"
-val licenseUrl = "$github/blob/main/LICENSE"
-
-// -------------------
-// Variables for Documentation Generator
-// -------------------
-
-// # DEP + GROUP are optional arrays!
-
-// OPTIONAL = "false"               // defines if this module is optional or not
-// GROUP_ID = "core"                // defines the "grouping" in the documentation this module belongs to
-// #DEP = "deps.composables.core|Compose Unstyled (core)|https://github.com/composablehorizons/compose-unstyled/"
-// PLATFORM_INFO = ""               // defines a comment that will be shown in the documentation for this modules platform support
-
-// GLOBAL DATA
-// BRANCH = "master"        // defines the branch on github (master/main)
-// GROUP = "core|Core|core"
-// #GROUP = "modules|Modules|dialog modules"
 
 // -------------------
 // Setup
@@ -53,7 +32,6 @@ android {
     namespace = androidNamespace
 
     compileSdk = app.versions.compileSdk.get().toInt()
-
 
     defaultConfig {
         minSdk = app.versions.minSdk.get().toInt()
@@ -87,7 +65,7 @@ dependencies {
     implementation(androidx.core)
 
 }
-
+/*
 mavenPublishing {
 
     configure(AndroidSingleVariantLibrary("release", true, true))
@@ -125,8 +103,28 @@ mavenPublishing {
     }
 
     // Configure publishing to Maven Central
-    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, true)
+    publishToMavenCentral(true)
 
     // Enable GPG signing for all publications
     signAllPublications()
 }
+*/
+// -------------------
+// Configurations
+// -------------------
+
+// android configuration
+android {
+    buildFilePlugin.setupAndroidLibrary(
+        androidNamespace = androidNamespace,
+        compileSdk = app.versions.compileSdk,
+        minSdk = app.versions.minSdk,
+        buildConfig = false
+    )
+}
+
+// maven publish configuration
+if (buildFilePlugin.checkGradleProperty("publishToMaven") != false)
+    buildFilePlugin.setupMavenPublish(
+        platform = AndroidSingleVariantLibrary("release", true, true)
+    )

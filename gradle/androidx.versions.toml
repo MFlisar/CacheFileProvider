@@ -1,6 +1,6 @@
 [versions]
 
-androidx-core =     "1.13.1"
+androidx-core =     "1.17.0"
 
 [libraries]
 

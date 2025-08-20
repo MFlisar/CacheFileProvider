@@ -1,0 +1,13 @@
+[versions]
+
+# mflisar
+kmp-library =               "1.7.3"
+
+[plugins]
+
+kmplibrary-buildplugin =            { id = "io.github.mflisar.kmp-library.plugins-build-gradle",           version.ref = "kmp-library" }
+
+[libraries]
+
+# mflisar
+kmplibrary-docs =                   { module = "io.github.mflisar.kmp-library:docs",                        version.ref = "kmp-library" }

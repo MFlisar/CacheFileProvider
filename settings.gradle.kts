@@ -1,12 +1,3 @@
-pluginManagement {
-
-    // repositories for build
-    repositories {
-        mavenCentral()
-        google()
-    }
-}
-
 dependencyResolutionManagement {
     repositories {
         mavenCentral()
@@ -21,6 +12,20 @@ dependencyResolutionManagement {
         create("androidx") {
             from(files("gradle/androidx.versions.toml"))
         }
+        create("deps") {
+            from(files("gradle/deps.versions.toml"))
+        }
+    }
+}
+
+pluginManagement {
+
+    // repositories for build
+    repositories {
+        mavenCentral()
+        google()
+        gradlePluginPortal()
+        maven("https://jitpack.io")
     }
 }
 
@@ -29,4 +34,3 @@ dependencyResolutionManagement {
 // --------------
 
 include(":library")
-project(":library").projectDir = file("library")
