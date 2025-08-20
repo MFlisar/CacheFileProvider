@@ -25,5 +25,6 @@ com.michaelflisar.kmplibrary.docs.registerBuildDocsTasks(
     tasks = tasks,
     project = project,
     relativeModulesPath = "library",
-    relativeDemosPath = ""
+    relativeDemosPath = "",//null,
+    multiplatform = false
 )

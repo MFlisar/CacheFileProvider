@@ -1,9 +1,6 @@
 import com.vanniktech.maven.publish.AndroidSingleVariantLibrary
 import com.michaelflisar.kmplibrary.BuildFilePlugin
-import com.michaelflisar.kmplibrary.dependencyOf
-import com.michaelflisar.kmplibrary.dependencyOfAll
-import com.michaelflisar.kmplibrary.Target
-import com.michaelflisar.kmplibrary.Targets
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.kotlin.android)
@@ -26,6 +23,12 @@ val androidNamespace = "com.michaelflisar.cachefileprovider"
 // -------------------
 // Setup
 // -------------------
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_17)
+    }
+}
 
 android {
 
@@ -50,10 +53,6 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
-    }
 }
 
 dependencies {
@@ -65,50 +64,7 @@ dependencies {
     implementation(androidx.core)
 
 }
-/*
-mavenPublishing {
 
-    configure(AndroidSingleVariantLibrary("release", true, true))
-
-    coordinates(
-        groupId = groupID,
-        artifactId = artifactId,
-        version = System.getenv("TAG")
-    )
-
-    pom {
-        name.set(libraryName)
-        description.set(libraryDescription)
-        inceptionYear.set("$release")
-        url.set(github)
-
-        licenses {
-            license {
-                name.set(license)
-                url.set(licenseUrl)
-            }
-        }
-
-        developers {
-            developer {
-                id.set("mflisar")
-                name.set("Michael Flisar")
-                email.set("mflisar.development@gmail.com")
-            }
-        }
-
-        scm {
-            url.set(github)
-        }
-    }
-
-    // Configure publishing to Maven Central
-    publishToMavenCentral(true)
-
-    // Enable GPG signing for all publications
-    signAllPublications()
-}
-*/
 // -------------------
 // Configurations
 // -------------------
