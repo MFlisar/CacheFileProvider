@@ -26,32 +26,7 @@ val androidNamespace = "com.michaelflisar.cachefileprovider"
 
 kotlin {
     compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_17)
-    }
-}
-
-android {
-
-    namespace = androidNamespace
-
-    compileSdk = app.versions.compileSdk.get().toInt()
-
-    defaultConfig {
-        minSdk = app.versions.minSdk.get().toInt()
-        vectorDrawables.useSupportLibrary = true
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
-            consumerProguardFiles("proguard-rules.pro")
-        }
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        jvmTarget.set(JvmTarget.fromTarget(buildFilePlugin.javaVersion()))
     }
 }
 
